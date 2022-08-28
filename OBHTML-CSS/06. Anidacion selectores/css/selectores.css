@@ -1,0 +1,12 @@
+* {
+    /* padding: 0%;
+    margin: 0%; */
+}
+
+body section.main .contenedor p {
+    color: green;
+}
+
+.contenedor #boton-contenedor {
+    background-color: yellow;
+}
