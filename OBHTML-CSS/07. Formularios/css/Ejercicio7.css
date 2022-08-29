@@ -2,6 +2,8 @@
 
 * {
     font-family: ubuntu;
+    color: white;
+    background-color: #161717;
 }
 
 h3.header {
@@ -46,13 +48,14 @@ a {
 
 .google-btn span {
     color: white;
+    background-color: #1A73E8;
     font-weight: 500;
-    padding: 15px;
+    padding: 10px;
 }
 
 .google-btn picture {
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     background-color: white;
     border-radius: 2px;
     display: flex;
@@ -63,11 +66,19 @@ a {
 .twitter-btn picture {
     width: 35px;
     height: 35px;
-    background-color: #f3f3f4;
+    background-color: #212121;
     border-radius: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.twitter-btn picture:hover {
+    background-color: #454045;
+}
+
+.twitter-btn picture img:hover {
+    background-color: #454045;
 }
 
 .twitter-btn picture img {
@@ -76,11 +87,13 @@ a {
 
 .google-btn picture img {
     width: 100%;
+    background-color: white;
+    border-radius: 5px;
 }
 
 .twitter-btn {
     color: #bbb;
-    background-color: #eee;
+    background-color: #212121;
     display: flex;
     align-self: center;
     border: none;
@@ -90,7 +103,7 @@ a {
 }
 
 .twitter-btn:hover {
-    background-color: #ddd;
+    background-color: #454045;
 }
 
 .separator {
@@ -135,7 +148,7 @@ label span {
 
 .section-inputs label input {
     width: 80%;
-    background-color: #f3f3f4;
+    background-color: #212121;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -144,8 +157,9 @@ label span {
 }
 
 label input {
+    color: white;
     width: 90%;
-    background-color: #f3f3f4;
+    background-color: #212121;
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
@@ -155,14 +169,14 @@ label input {
 }
 
 label input:hover {
-    background-color: white;
-    border: solid 1px #f3f3f4;
+    background-color: #454045;
+    border: solid 1px #212121;
     box-shadow: 0 0 4px #eb50ff4f;
 }
 
 label input:focus {
-    background-color: white;
-    border: solid 1px #f3f3f4;
+    background-color: #454045;
+    border: solid 1px #212121;
     box-shadow: 0 0 4px #eb50ff4f;
 }
 
