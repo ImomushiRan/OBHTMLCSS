@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: beige;
+}
+
+.container {
+    flex-direction: row;
+    display: flex;
+    flex-grow: 1;
+    align-content: flex-end;
+    justify-content: end;
+}
+
+/* .container .mainsect {
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    justify-self: end;
+    width: 10rem;
+} */
+
+.barlateral {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    height: 100vh;
+    position: fixed;
+    background-color: #a0a0a0;
+    color: white;
+    gap: 2rem;
+    /* margin: 0.5rem; */
+    padding: 0.5rem;
+    padding-top: 2rem;
+}
+
+.barlateral a {
+    color: white;
+    font-size: 2rem;
+}
+
+h1 {
+    padding: 1.5rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    width: 25rem;
+    font-size: 1.5rem;
+}
+
+@media (max-width:640px){
+    body {
+        height: 100vh;
+    }
+    
+    .barlateral {
+        position: fixed;
+        flex-direction: row;
+        height: auto;
+        padding-top: 0.5rem;
+        width: 100vw;
+        align-self: flex-end;
+    }
+}
+
+@media (max-width:400px) {
+    body {
+        height: 100vh;
+    }
+    
+    .barlateral {
+        position: fixed;
+        flex-direction: row;
+        height: auto;
+        padding-top: 0.5rem;
+        width: 100vw;
+        align-self: flex-end;
+    }
+
+    p {
+        width: 100vw;
+    }
+}
