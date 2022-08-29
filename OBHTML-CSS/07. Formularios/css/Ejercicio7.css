@@ -83,6 +83,7 @@ a {
 
 .twitter-btn picture img {
     width: 100%;
+    background-color: #212121;
 }
 
 .google-btn picture img {
@@ -103,6 +104,14 @@ a {
 }
 
 .twitter-btn:hover {
+    background-color: #454045;
+}
+
+.twitter-btn:hover picture img{
+    background-color: #454045;
+}
+
+.twitter-btn:hover picture {
     background-color: #454045;
 }
 
