@@ -1,0 +1,215 @@
+@use "components" as comps;
+
+@mixin section-display() {
+    width: 100%;
+    max-width: 992px;
+    margin: auto;
+    padding: 3rem;
+}
+html {
+    min-width: 100vw;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 3rem;
+    border-bottom: solid 1px #ddd;
+
+}
+
+.logo a img {
+    max-width: 7rem;
+}
+
+.sec-home {
+    display: flex;
+    align-items: center;
+    @include section-display();
+    .home-cta {
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        .cta-text {
+            color: comps.$btn-primary;
+        }
+        .home-title {
+            font-size: 3rem;
+            width: 20rem;
+        }
+
+        .home-description {
+            width: 300px;
+            font-weight: 500;
+        }
+        .lead-magnet {
+            .input-col {
+                max-width: 200px
+            }
+        }
+    }
+}
+
+.sec-features {
+    @include section-display();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .intro {
+        text-align: center;
+        h3 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 0.8rem;
+            color: #888;
+        }
+    }
+    .features {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .text {
+            padding: 2rem 0;
+            flex: 1;
+            .feature {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                .description {
+                    margin-left: 1rem;
+                    max-width: 20rem;
+                    .descr-title {
+                        font-size: 1.15rem;
+                    }
+                    .desc-text {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        .image{
+            min-width: 20rem;
+        }
+    }
+}
+
+.sec-benefits {
+    width: 990px;
+    margin: auto;
+    border-top: 1px solid #ddd;
+    .intro {
+        @extend .sec-features, .intro;
+    }
+    .benefit-cards {
+        width: 100%;
+    }
+}
+
+.sec-kpis {
+    width: 100%;
+    background-color: comps.$btn-primary;
+    color: white;
+    padding: 4rem;
+    .kpi {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .number {
+            font-size: 3.5rem;
+            font-weight: 600;
+        }
+        .desc {
+            font-size: 0.9rem;
+            color: #ffffffaa;
+        }
+    }
+}
+
+.sec-onboarding {
+    .intro {
+        @extend .sec-features, .intro;
+    }
+    .steps {
+        padding: 0 7rem 5rem 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .separator {
+            flex: 1;
+            border-top: 2px solid #ddd;
+            margin: 0 1rem;
+        }
+    }
+}
+
+.sec-footer-cta {
+    background-color: comps.$footer-clr;
+    padding: 5rem;
+    background-image: url("/14-15.\ Proyecto\ final/assets/img/bg.png");
+    background-repeat: no-repeat;
+    background-position: 100%;
+    .footer-cta {
+        width: 40%;
+        .cta-title {
+            font-size: 2rem;
+        }
+        .cta-descr {
+            font-size: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .sec-benefits {
+        max-width: 300px;
+    }
+    section.sec-kpis{
+        margin: 0%;
+        margin-top: 2rem;
+    }
+    .sec-onboarding {
+        flex-direction: column;
+        .steps {
+            flex-direction: column;
+        }
+    }
+    .sec-benefits {
+        .intro {
+            text-align: center;
+            h3{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .sec-footer-cta {
+        background-image: none;
+        .footer-cta{
+            
+        width: 100%;
+        }
+    }
+
+    .sec-features{
+        .intro {
+            h3 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+/* 
+    #pew {
+        color: red;
+    } */
+}
