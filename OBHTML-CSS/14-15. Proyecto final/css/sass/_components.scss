@@ -1,0 +1,70 @@
+@mixin btn-sm-modify {
+    font-size: 0.75rem;
+    padding: 0.1rem 1rem;
+}
+
+@mixin btn-base {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.25rem;
+}
+
+$btn-primary: #0075FF;
+
+.btn-main {
+    @include btn-base();
+    background-color: $btn-primary;
+    color: white;
+    border: 1px solid $btn-primary;
+
+    &:hover {
+        background-color: white;
+        color: $btn-primary;
+    }
+
+    &-s {
+        @extend .btn-main;
+        @include btn-sm-modify();
+    }
+}
+
+.btn-sec {
+    @include btn-base();
+    color: #000;
+    background-color: transparent;
+    border: none;
+
+    &:hover {
+        background-color: white;
+        color: #888;
+    }
+
+    &-s {
+        @extend .btn-sec;
+        @include btn-sm-modify();
+    }
+}
+
+.main-menu {
+    li {
+        font-size: 0.75rem;
+        list-style: none;
+        padding: 1rem;
+        display: inline;
+    }
+}
+
+/* .circle {
+    display: inline;
+    padding: 0.1rem 0.25rem;
+    border-radius: 2rem;
+    border: 1px solid #888;
+} */
+
+.icon-sm {
+    i {
+    color: $btn-primary;
+    padding: 0.1rem 0.25rem;
+    border-radius: 50%;
+    box-shadow: 0 0 4px #00000040;
+    }
+}
